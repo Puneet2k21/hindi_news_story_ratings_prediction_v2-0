@@ -1,0 +1,15 @@
+setuptools
+wheel
+pandas
+numpy
+tensorflow
+scikit-learn==1.5.1
+xgboost
+scipy
+streamlit
+streamlit-authenticator
+pyyaml
+gspread
+google-auth
+google-auth-oauthlib
+
