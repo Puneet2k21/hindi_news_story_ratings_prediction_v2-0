@@ -1,15 +1,21 @@
-setuptools
-wheel
+python_version == 3.10
+# Core libraries
 pandas
 numpy
-tensorflow
-scikit-learn==1.5.1
-xgboost
+scikit-learn
 scipy
+tensorflow
+keras-tuner
+# Web interface
 streamlit
 streamlit-authenticator
-pyyaml
+# Excel reading support
+openpyxl
+# Google Sheets integration
 gspread
 google-auth
 google-auth-oauthlib
+# YAML for authenticator
+pyyaml
+
 
