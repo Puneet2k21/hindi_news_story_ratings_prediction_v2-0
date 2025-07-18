@@ -1,9 +1,9 @@
 # Core libraries
 pandas
-numpy
+numpy==1.26.4
 scikit-learn
 scipy
-tensorflow
+tensorflow==2.14.0
 keras-tuner
 # Web interface
 streamlit
