@@ -3,7 +3,7 @@ pandas
 numpy==1.26.4
 scikit-learn
 scipy
-tensorflow==2.14.0
+tensorflow==2.19.0
 keras-tuner
 # Web interface
 streamlit
