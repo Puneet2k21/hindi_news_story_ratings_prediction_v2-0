@@ -1,8 +1,8 @@
 credentials:
   usernames:
-    Puneet2k21@yahoo.com:
+    puneet2k21@yahoo.com:
       name: "Puneet Sah"
-      password: "$2b$12$t/3puaXFrj8oDpWDAYnT7uKqO39UaZuAUSor.mkTpXQOhWeSwUUuW"
+      password: "$2b$12$SAZSir1ziBZN1/xEhSq2QuVOO.GsgIPy0zgeLN3TLE5ooRAw70ifG"
       role: "admin"
       email: "puneet2k21@yahoo.com"  # Add email field
     admin@gmail.com:
