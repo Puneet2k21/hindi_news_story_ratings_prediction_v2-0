@@ -27,7 +27,7 @@ def init_google_sheet():
     service_account_info = st.secrets["service_account"]
     creds = Credentials.from_service_account_info(service_account_info, scopes=scope)
     client = gspread.authorize(creds)
-    sheet = client.open("Streamlit_login_track").worksheet("movie_app")
+    sheet = client.open("Streamlit_login_track").worksheet("hindi_news_app")
     return sheet
 
 def log_user_login(username):
@@ -58,7 +58,7 @@ if st.session_state['authentication_status']:
     st.write(f'Welcome *{st.session_state["name"]}*')
 
     # App Title
-    st.title("Hindi News Story Viewership Tier Prediction")
+    st.title("Hindi News Story Rating Prediction based on Machine Learning model")
 
     # ----------------------------------------
     # 5. Define Dropdown Input Options
@@ -167,12 +167,20 @@ if st.session_state['authentication_status']:
 
         st.success(f"Predicted Tier: {final_pred} - {tier_map[final_pred]}")
 
-        st.markdown("""
-        **Viewership Tier Description**  
-        • T1: Greater than 4.5 TVTs  
-        • T2: Between 2.9 and 4.5 TVTs  
-        • T3: Less than 2.9 TVTs
-        """)
+        # Note with Markdown formatting
+
+        note = (
+        "The predicted value tier is determined based on a five-point scale, ranging from lowest to highest. "
+        "The tiers are categorized as follows:\n\n"
+        
+        "• **Minimal Viewership**: Less than 213 TVTs  \n"
+        "• **Low Viewership**: 213 to 244 TVTs  \n"
+        "• **Average Viewership**: 244 to 276 TVTs  \n"
+        "• **High Viewership**: 277 to 318 TVTs  \n"
+        "• **Maximum Viewership**: 319 TVTs and above."
+)
+        st.markdown(note)
+
 
 # -------------------------------
 # 12. Login Failure Handling
@@ -187,9 +195,9 @@ elif st.session_state['authentication_status'] is None:
 # -------------------------------
 st.write("""
 ---
-**Note**: This app leverages deep learning for predicting story viewership tiers.  
-Use results with editorial judgment.  
-For model details, contact:  
+**Note**: This app leverages machine learning to predict news ratings, offering insights based on historical data. 
+Predictions should be combined with domain expertise. The developer is not responsible for outcomes based solely on the app's predictions. 
+For technical details on ML models employed and error metrics, contact: 
 **Puneet Sah**  
 📧 puneet2k21@gmail.com  
 📞 9820615085
